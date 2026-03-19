@@ -1,0 +1,22 @@
+package com.capgemini.model.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Entity
+public class Project implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
+	private String name;
+	private String description;
+}
